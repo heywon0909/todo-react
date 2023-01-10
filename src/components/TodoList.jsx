@@ -4,7 +4,7 @@ import {RiDeleteBin2Fill} from 'react-icons/ri'
 
 export default function TodoList() {
     return (
-        <div>
+        <div className={styles.container}>
             <ul>
                 <li>
                 <div className={styles.todoItem}>

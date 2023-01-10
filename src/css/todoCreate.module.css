@@ -1,0 +1,24 @@
+.container{
+    width: 100%;
+    height: 60px;
+    background-color: #d7d7d7;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.container input {
+    width: 310px;
+    border: none;
+    height: 35px;
+    margin: 10px 9px;
+    border-radius: 9px;
+}
+.addBtn{
+    border:none;
+    width: 60px;
+    height: 35px;
+    font-size: 1rem;
+    margin-left: -17px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+   
+}

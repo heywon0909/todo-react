@@ -1,6 +1,9 @@
 ul{
     list-style: none;
 }
+.container{
+    height: 270px;
+}
 .todoItem{
     display:flex;
     width: 350px;
