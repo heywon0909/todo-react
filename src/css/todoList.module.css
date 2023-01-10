@@ -1,3 +1,22 @@
 ul{
     list-style: none;
 }
+.todoItem{
+    display:flex;
+    width: 350px;
+}
+.deleteBtn{
+    margin-left: auto;
+    padding: 0px 4px;
+    background-color: #959595;
+    border-radius: 11px;
+}
+.deleteBtn:hover .icon{
+    animation: rotate_image 2s linear;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image{
+    100% {
+        transform: rotate(45deg);
+    }
+}
