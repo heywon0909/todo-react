@@ -1,0 +1,29 @@
+.header{
+   background-color: #e7e4e4;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   display:flex;
+   height: 60px;
+}
+.settingBtn{
+    width:20px;
+    height: 20px;
+    padding: 20px 11px;
+}
+.todoType{
+    margin-left: auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    width:200px
+}
+.todoType div{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: -7px;
+    cursor: pointer;
+}
+.on{
+  border-bottom: 2px solid #f44336;
+}
