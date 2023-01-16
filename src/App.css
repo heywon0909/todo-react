@@ -14,3 +14,11 @@
     border-radius: 9px;
     /* border: 1px solid #6e6c6c; */
 }
+.outContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+.outContainer.dark{
+     background-color: #424242;
+}

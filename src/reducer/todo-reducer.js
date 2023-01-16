@@ -2,21 +2,27 @@ export default function todoReducer(todos, action) {
     switch (action.type) {
        
         case 'added': {
-         const { todo } = action;
-        let arr = [...todos, todo];
+            const { todo } = action;
+            let arr = [...todos, todo];
             let recent = JSON.stringify(arr);
             localStorage.setItem('todoList', recent);
-            return arr; 
-            }   
-        case 'deleted':
-            // todoList에서 삭제
-            // localStorage에 넣기
-            // console.log('todo', todo);
-            break;
+            return arr;
+        }
+        case 'deleted':{
+            const { todo } = action;
+            let arr = todos.filter(item => item.title !== todo.title);
+            localStorage.todoList = JSON.stringify(arr);
+            return arr;
+            }
         case 'updated': {
              const { todo } = action;
-            console.log('todo', todo, todos);
-            return todos;
+             let arr =todos.map(item => {
+                if (item.title === todo.title) {
+                    return {...item,...todo}
+                }else return {...item}
+             })
+            localStorage.todoList = JSON.stringify(arr);
+            return arr;
         }
         case 'created':
             

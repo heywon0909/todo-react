@@ -5,17 +5,38 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+.dark{
+    width: 100%;
+    height: 60px;
+    background-color: #161616;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.dark input {
+    width: 310px;
+    border: none;
+    height: 35px;
+    margin: 10px 9px;
+    border-radius: 9px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
 .container input {
     width: 310px;
     border: none;
     height: 35px;
     margin: 10px 9px;
     border-radius: 9px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 .addBtn{
     border:none;
     width: 60px;
-    height: 35px;
+    height: 38px;
     font-size: 1rem;
     margin-left: -17px;
     border-top-right-radius: 9px;

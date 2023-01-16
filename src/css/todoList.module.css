@@ -1,8 +1,16 @@
 ul{
     list-style: none;
+    padding:10px 20px;
 }
 .container{
-    height: 270px;
+    height: 300px;
+}
+.dark{
+    height: 300px;
+    background-color:#262424;
+}
+.dark li {
+    color:#fff;
 }
 .todoItem{
     display:flex;
@@ -13,6 +21,7 @@ ul{
     padding: 0px 4px;
     background-color: #959595;
     border-radius: 11px;
+    border:none;
 }
 .deleteBtn:hover .icon{
     animation: rotate_image 2s linear;
@@ -22,4 +31,7 @@ ul{
     100% {
         transform: rotate(45deg);
     }
+}
+.checked{
+    text-decoration: line-through;
 }

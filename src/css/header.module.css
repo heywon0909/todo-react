@@ -4,6 +4,15 @@
    border-top-right-radius: 8px;
    display:flex;
    height: 60px;
+   margin-bottom: -16px;
+}
+.dark{
+ background-color: #161616;
+ border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+   display:flex;
+   height: 60px;
+   margin-bottom: -16px;
 }
 .settingBtn{
     width:20px;
@@ -24,6 +33,16 @@
     margin-bottom: -7px;
     cursor: pointer;
 }
+.dark .todoType div{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: -7px;
+    cursor: pointer;
+    color:#fff;
+}
 .on{
   border-bottom: 2px solid #f44336;
+}
+.dark .on{
+    border-bottom: 2px solid #ffb4af;
 }

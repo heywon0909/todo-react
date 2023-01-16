@@ -3,14 +3,21 @@ import styles from '../css/header.module.css'
 import {IoSettingsSharp} from 'react-icons/io5'
 
 
- function Header({ selectedType, onClick }){
+ function Header({selectedType, onClick,darkMode,setMode}){
    
-    const [typeList] = useState(['All', 'Active', 'Completed'])
-   
-    return (
-        <div className={styles.header}>
-            <div className={styles.settingBtn}>
-                <IoSettingsSharp />
+     const [typeList] = useState(['All', 'Active', 'Completed'])
+     const handleMode = () => {
+         setMode(prev => !prev);
+         if (darkMode) {
+            
+         }
+     }
+ 
+     return (
+        
+         <div className={!darkMode ? `${styles.header}` : `${styles.header} ${styles.dark}`} >
+            <div className={styles.settingBtn} onClick={handleMode}>
+                <IoSettingsSharp color={!darkMode ? '#000':'#fff'}/>
             </div>
             <div className={styles.todoType}>
                 {typeList.map((type) => (
