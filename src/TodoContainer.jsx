@@ -4,7 +4,7 @@ import TodoList from './components/TodoList';
 import TodoCreate from './components/TodoCreate';
 import todoReducer from './reducer/todo-reducer';
 
-export default function TodoContainer({darkMode,setDarkMode}) {
+export default function TodoContainer() {
     const [selectedType, setSelectedType] = useState('All');
     
     const handleType = (e) => { setSelectedType(e.target.innerText) };
@@ -32,9 +32,9 @@ export default function TodoContainer({darkMode,setDarkMode}) {
     
     return (
         <div className='todo-box'>
-            <Header selectedType={selectedType} onClick={handleType} darkMode={darkMode} setMode={setDarkMode}  />
-            <TodoList selectedType={selectedType} onUpdate={handleUpdated} onDelete={handleDeleted} todoList={todoList} darkMode={darkMode} />
-            <TodoCreate onAdd={handleAdd} darkMode={darkMode} />
+            <Header selectedType={selectedType} onClick={handleType}  />
+            <TodoList selectedType={selectedType} onUpdate={handleUpdated} onDelete={handleDeleted} todoList={todoList} />
+            <TodoCreate onAdd={handleAdd} />
         </div>
     );
 }

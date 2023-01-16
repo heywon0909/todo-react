@@ -1,10 +1,11 @@
-import React,{useState} from 'react';
+import React,{useContext, useState} from 'react';
 import styles from '../css/todoList.module.css'
 import {RiDeleteBin2Fill} from 'react-icons/ri'
+import { DarkModeContext } from '../context/DarkModeContext';
 
-export default function TodoList({todoList, selectedType,onUpdate,onDelete,darkMode}) {
+export default function TodoList({todoList, selectedType,onUpdate,onDelete}) {
     const [checked, setChecked] = useState(false);
-  
+    const context = useContext(DarkModeContext);
     const handleChecked = (e) => {
         let value = e.target.parentElement.innerText;
         e.target.parentElement.classList.add(styles.checked)
@@ -17,7 +18,7 @@ export default function TodoList({todoList, selectedType,onUpdate,onDelete,darkM
     }
     
     return (
-        <div className={!darkMode ? `${styles.container}` :`${styles.container} ${styles.dark}`}>
+        <div className={!context.darkMode ? `${styles.container}` :`${styles.container} ${styles.dark}`}>
             <ul>
                 {
                     // eslint-disable-next-line array-callback-return

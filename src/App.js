@@ -1,13 +1,16 @@
-import { useState } from 'react';
+
+import { useContext } from 'react';
 import './App.css';
+import { DarkModeContext } from './context/DarkModeContext';
 import TodoContainer from './TodoContainer';
 
+
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const context = useContext(DarkModeContext);
   return (
-    <div className={!darkMode ? 'outContainer' : 'outContainer dark'}>
-      <TodoContainer darkMode={darkMode} setDarkMode={setDarkMode} />
-    </div>
+      <div className={!context.darkMode ? 'outContainer' : 'outContainer dark'}>
+        <TodoContainer />
+      </div>
   );
 }
 
