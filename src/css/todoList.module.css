@@ -2,6 +2,9 @@ ul{
     list-style: none;
     padding:10px 20px;
 }
+li {
+    padding: 3px 1px;
+}
 .container{
     height: 300px;
 }
