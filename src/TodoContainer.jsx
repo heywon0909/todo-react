@@ -13,10 +13,11 @@ export default function TodoContainer() {
 
     const handleAdd = useCallback(value => {
         console.log('value', value);
-        let todo = { type: '', title: value };
+        let todo = { type: 'All', title: value };
         dispatch({ type: 'added', todo })
     }, []);
-    const handleUpdated = useCallback((todo) => {
+    const handleUpdated = useCallback((value) => {
+        let todo = { type: 'Completed', title: value };
         dispatch({ type: 'updated', todo });
     }, []);
     const handleDeleted = useCallback((todo) => {
