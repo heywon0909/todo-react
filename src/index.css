@@ -45,6 +45,10 @@ ul {
     list-style: none;
    
 }
+button{
+  outline: none;
+  border:none;
+}
 /* 스크롤바 설정*/
 ::-webkit-scrollbar{
     width: 5px;

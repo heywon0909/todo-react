@@ -8,7 +8,7 @@ function App() {
   const [filter, setFilter] = useState(menus[0]);
   return (
       <>
-      <Header filter={filter} menus={menus} onFilterChage={setFilter} />
+      <Header filter={filter} menus={menus} onFilterChange={setFilter} />
         <TodoContainer />
       </>
   );

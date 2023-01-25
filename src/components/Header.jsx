@@ -16,8 +16,10 @@ import { DarkModeContext } from '../context/DarkModeContext';
                 <IoSettingsSharp color={!context.darkMode ? '#000':'#fff'}/>
             </div>
             <ul className={styles.todoType}>
-                {menus.map((filter,index) => (
-                    <button key={index}>{filter}</button>
+                 {menus.map((menu, index) => (
+                    <li key={index}>
+                         <button className={`${styles.header} ${menu === filter && styles.on}`} onClick={()=>onFilterChange(menu)}>{menu}</button>
+                    </li>
                 ))}
             </ul>
         </div>

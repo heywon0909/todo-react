@@ -1,48 +1,27 @@
 .header{
-   background-color: #e7e4e4;
+   background-color: var(--color-bg-dark);
    border-top-left-radius: 8px;
    border-top-right-radius: 8px;
    display:flex;
-   height: 60px;
-   margin-bottom: -16px;
-}
-.dark{
- background-color: #161616;
- border-top-left-radius: 8px;
-border-top-right-radius: 8px;
-   display:flex;
-   height: 60px;
-   margin-bottom: -16px;
+   justify-content: space-between;
+   align-items: center;
+   height: 50px;
+   padding: 0 0.5rem;
 }
 .settingBtn{
     width:20px;
     height: 20px;
-    padding: 20px 11px;
 }
 .todoType{
     margin-left: auto;
     display: flex;
     text-align: center;
-    justify-content: space-between;
-    padding: 20px 10px;
-    width:200px
+    justify-content: space-between;  
 }
-.todoType div{
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: -7px;
+.todoType button{
+    font-size: 1.2rem;
     cursor: pointer;
-}
-.dark .todoType div{
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: -7px;
-    cursor: pointer;
-    color:#fff;
 }
 .on{
-  border-bottom: 2px solid #f44336;
-}
-.dark .on{
-    border-bottom: 2px solid #ffb4af;
+  border-bottom: 2px solid var(--color-accent);
 }
