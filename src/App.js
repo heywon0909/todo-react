@@ -1,16 +1,16 @@
-
-import { useContext } from 'react';
 import './App.css';
-import { DarkModeContext } from './context/DarkModeContext';
+import { useState } from 'react';
 import TodoContainer from './TodoContainer';
-
+import Header from './components/Header';
 
 function App() {
-  const context = useContext(DarkModeContext);
+  const menus = ['all', 'active', 'completed'];
+  const [filter, setFilter] = useState(menus[0]);
   return (
-      <div className={!context.darkMode ? 'outContainer' : 'outContainer dark'}>
+      <>
+      <Header filter={filter} menus={menus} onFilterChage={setFilter} />
         <TodoContainer />
-      </div>
+      </>
   );
 }
 

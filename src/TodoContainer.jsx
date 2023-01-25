@@ -1,5 +1,5 @@
 import React,{useCallback, useEffect, useReducer, useState} from 'react';
-import Header from './components/Header';
+// import Header from './components/Header';
 import TodoList from './components/TodoList';
 import TodoCreate from './components/TodoCreate';
 import todoReducer from './reducer/todo-reducer';
@@ -31,11 +31,16 @@ export default function TodoContainer() {
     
     
     return (
-        <div className='todo-box'>
-            <Header selectedType={selectedType} onClick={handleType}  />
+        <>
+            {/* <Header selectedType={selectedType} onClick={handleType}  /> */}
             <TodoList selectedType={selectedType} onUpdate={handleUpdated} onDelete={handleDeleted} todoList={todoList} />
             <TodoCreate onAdd={handleAdd} />
-        </div>
+        </>
     );
 }
 
+function getLocalStorageTodo() {
+    let todo = localStorage.getItem('todoList');
+    console.log('todo', todo);
+    return []
+}
